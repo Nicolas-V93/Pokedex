@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@100&display=swap');
+
+/* ---- General ---- */
+
+/* .image-container img {
+  width: 50px;
+  height: 50px;
+} */
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(10, 10, 5, 0.712);
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  /* letter-spacing: 4.8; */
+  line-height: 1.4;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* MOBILE ONLY: Header */
+
+/* -------Styling the header --- MOBILE ONLY*/
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+header > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(230, 68, 68);
+  padding: 2rem 0rem;
+  color: #fff;
+}
+
+header > div > img {
+  margin-right: 1rem;
+}
+
+/* Styling the filter navigation --- MOBILE ONLY */
+
+.dropdown {
+  background-color: inherit;
+  margin-top: 2rem;
+  max-width: 100%;
+  margin-left: 1rem;
+}
+
+.dropdown > button {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+#pokemon-dropdown {
+  max-width: 250px;
+}
+
+#dropdown-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.dropdown-item {
+  width: 85px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 0.1rem 0;
+  color: #fff;
+}
+
+.dropdown-menu-dark .dropdown-item {
+  color: #fff;
+}
+
+/* Styling pokemon grid container */
+
+.poke-container {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  margin: 0 0.6rem;
+}
+
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 300px;
+  border-radius: 0.6rem;
+  color: rgb(253, 250, 250);
+  padding: 1rem;
+}
+
+.pokemon-card h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: rgba(253, 253, 253, 0.753);
+  padding-top: 1rem;
+}
+
+.pokemon-card > p {
+  font-size: 0.9rem;
+}
+
+.image-container {
+  width: 120px;
+  height: 120px;
+}
+
+.image-container img {
+  max-width: 100%;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Styling the type buttons inside poke container */
+
+.pokemon-types {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.pokemon-types > * {
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+}
+/* Styling filter / navigation --- LARGER SCREENS */
+
+#nav-filter {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+#types-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#types-container > * {
+  flex: 0 0 10%;
+  cursor: pointer;
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+}
+
+#types-container > *:hover {
+  color: #fff;
+}
+
+#filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#filter p {
+  font-size: 1.3rem;
+}
+
+hr.style-one {
+  border: 0;
+  height: 4px;
+  background-image: linear-gradient(to right, rgb(145, 137, 137), rgb(134, 122, 122), rgb(131, 121, 121));
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  .dropdown {
+    display: none;
+  }
+  #nav-filter {
+    display: block;
+  }
+}
