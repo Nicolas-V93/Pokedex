@@ -55,7 +55,7 @@ function CreateCard(pokemon) {
   const pokemonId = `#${pokemon.id.toString().padStart(3, 0)}`;
   const pokemonName = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
   const availableTypes = pokemon.types.map((pokemon) => pokemon.type.name[0].toUpperCase() + pokemon.type.name.slice(1));
-  const pokemonImageUrl = `../images/${pokemon.id}.png`;
+  const pokemonImageUrl = `images/${pokemon.id}.png`;
   const bgColorPokemon = GetPokemonTypeColor(availableTypes[0], true);
 
   const typesDiv = document.createElement('div');
